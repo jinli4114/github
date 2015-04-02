@@ -9,6 +9,7 @@ int main(){
 	int num[3],g_num[3],A,B,i,j,k,n=0,win=0,lose=0;
 	char a;
 	bool flag=true;
+	while (flag){                                           //this while is used for play games many times
 		cout<<"Do you need to play games?(Y/N)"<<endl;
 		cin>>a;
 		if(a=='N') {
@@ -17,6 +18,7 @@ int main(){
 		}
 		else{
 			n+=1;
+			srand(time(NULL));                               //conduct three different numbers
 			num[0]=rand()%10;
 			num[1]=rand()%10;
 			while (num[0]==num[1]){
@@ -52,5 +54,4 @@ int main(){
 	}
 	return 0;
 }
-
 
